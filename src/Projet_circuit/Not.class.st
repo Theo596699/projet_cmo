@@ -11,7 +11,7 @@ Class {
 
 { #category : 'accessing' }
 Not >> description [ 
-	^ {self. self id.}
+	^ self class name, ' id :', self id printString.
 ]
 
 { #category : 'accessing' }
@@ -28,7 +28,7 @@ Not >> entree: anObject [
 
 { #category : 'accessing' }
 Not >> etat [
-
+	self assert: entree notNil description: 'Entrée non connectée'.
 	^ entree etat not
 ]
 

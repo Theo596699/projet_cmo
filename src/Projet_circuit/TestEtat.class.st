@@ -23,6 +23,17 @@ TestEtat >> testAnd [
 ]
 
 { #category : 'tests' }
+TestEtat >> testAndErreur [
+	|i1 a|
+	i1:=Interrupteur new.
+	a:=And new.
+	i1 on.
+	a entree1: i1.
+	self should: [a etat] raise: Error
+ 
+]
+
+{ #category : 'tests' }
 TestEtat >> testComplet [
 	|i1 i2 is n o a |
 	i1:=Interrupteur new.
@@ -71,5 +82,16 @@ TestEtat >> testOr [
 	o entree1: i1.
 	o entree2: i2.
 	self assert: o etat.
+
+]
+
+{ #category : 'tests' }
+TestEtat >> testOrErreur [
+	|i1 o|
+	i1:=Interrupteur new.
+	o:=Or new.
+	i1 off.
+	o entree1: i1.
+	self should: [o etat] raise: Error
 
 ]

@@ -11,7 +11,7 @@ Class {
 
 { #category : 'accessing' }
 Vanne >> description [ 
-	^ {self. self id.}
+	^ self class name, ' id :', self id printString.
 ]
 
 { #category : 'accessing' }
@@ -29,7 +29,7 @@ Vanne >> entree: anObject [
 { #category : 'accessing' }
 Vanne >> etat [
 
-	^ etat
+	^ entree etat
 ]
 
 { #category : 'accessing' }

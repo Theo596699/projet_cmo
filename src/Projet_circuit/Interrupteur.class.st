@@ -10,7 +10,7 @@ Class {
 
 { #category : 'accessing' }
 Interrupteur >> description [ 
-	^ {self. self id.}
+	^ self class name, ' id :', self id printString.
 ]
 
 { #category : 'accessing' }
