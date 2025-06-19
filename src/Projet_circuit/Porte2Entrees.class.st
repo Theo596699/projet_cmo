@@ -1,3 +1,6 @@
+"
+Sous classe de porte définissant les portes 2 entrées
+"
 Class {
 	#name : 'Porte2Entrees',
 	#superclass : 'Porte',
